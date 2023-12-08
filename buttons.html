@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Institut Teknologi Del</title>
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <link rel="shortcut icon" href="images/logo it del.jpg" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo it del.jpg" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.jpg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="CONTACTUSDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="CONTACTUSDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">DASHBOARD</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Pengumuman</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Program Pendidikan</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Lembaga</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face28.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="container-fluid page-body-wrapper">
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">LINKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">TESTIMONIAL</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Sistem Informasi
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Akademik
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Perpustakaan
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Alumni
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Kegiatan</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Kamis, 23 November 2023</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">IT Del Sosialisasikan Program MBKM kepada Mahasiswa</p>
+              <p class="text-gray mb-0">Pada Kamis, 23 November 2023, Divisi Pembelajaran Diluar Kampus – UPT PP ESTEM melaksanakan sosialisasi MBKM (Merdeka Belajar Kampus Merdeka) untuk mahasiswa-mahasiswi IT Del.</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Jumat, 24 November 2023</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Kuliah Umum oleh Konsulat Amerika Serikat terkait Suku Asli Amerika Serikat</p>
+              <p class="text-gray mb-0 ">Pada hari Jumat, 24 November 2023 Institut Teknologi Del menerima kunjungan dari Ibu Kristy Mordhorts (Konsulat Amerika Serikat di Medan).s</p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Aditya Pranata Siregar</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">Sofware</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face29.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Aditya Pranata Siregar</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+                  <div class="wrapper d-flex">
+                </div>
+              </li>
+                <div class="info">
+                </div>
+              </li>
+                <div class="info">
+                </div>
+              </li>
+                <div class="info">
+                </div>
+              </li>
+                <div class="info">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Pengumuman</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="buttons.html">Berita Terkini</a></li>
+                <li class="nav-item"> <a class="nav-link" href="dropdowns.html">Profile Del</a></li>
+                <li class="nav-item"> <a class="nav-link" href="typography.html">Berita SPMB</a></li>
+                <li class="nav-item"> <a class="nav-link" href="crud.html">Crud Pengumuman</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Program Pendidikan</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Program Studi</a></li>
+                <li class="nav-item"> <a class="nav-link" href="crud program pendidikan.html">Crud Program Studi</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#Lembaga" aria-expanded="false" aria-controls="Lembaga">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Lembaga</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="Lembaga">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">LPPM</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">Mitra Kerjasama Dengan IT Del</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">UPT PP-ESTEM</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">Sistem Penjaminan Mutu (SPM)</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">Pusat Modal Manusia (PMM)</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">Koperasi</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">Pusat Bahasa Del</a></li>
+                <li class="nav-item"> <a class="nav-link" href="crud lembaga.html">Crud Lembaga</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#Fasilitas" aria-expanded="false" aria-controls="Fasilitas">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Fasilitas</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="fasilitas">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="Fasilitas.html">Fasilitas</a></li>
+                <li class="nav-item"> <a class="nav-link" href="crud fasilitas.html">Crud Fasilitas</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </nav>
+      <div class="main-panel">          
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h4 class="card-title">View more posts</h4> 
+                      <div class="template-demo">
+                        <button type="button" class="btn btn-primary">Kuliah Umum oleh Konsulat Amerika Serikat terkait Suku Asli Amerika Serikat</button>
+                        <button type="button" class="btn btn-secondary">IT Del Sosialisasikan Program MBKM kepada Mahasiswa</button>
+                        <button type="button" class="btn btn-success">Sampling Kemenyan Toba di Kabupaten Tapanuli Utara, Kabupaten Humbang Hasundutan, dan Kabupaten Pakpak Bharat</button>
+                        <button type="button" class="btn btn-danger">IT Del Ikuti Kegiatan KMI EXPO XIV di Bali Hingga Terima Penghargaan Pendamping Terbaik</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h4 class="card-title">INFORMASI PENDAFTARAN</h4>
+                      <p class="card-description">http://spmb.del.ac.id
+                      <div class="template-demo">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h4 class="card-title">LIKE US ON FACEBOOK</h4>
+                      <p class="card-description">https://www.facebook.com/403538753086034?ref=embed_pages</p>
+                      <div class="template-demo">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h4 class="card-title">LATEST TWEETS</h4>
+                      <p class="card-description">https://twitter.com/i/flow/login?redirect_after_login=%2Fintent%2Ffollow%3Foriginal_referer%3Dhttps%253A%252F%252Fwww.del.ac.id%252F%26ref_src%3Dtwsrc%255Etfw%257Ctwcamp%255Ebuttonembed%257Ctwterm%255Efollow%257Ctwgr%255Einstitut_del%26screen_name%3Dinstitut_del</p>
+                      <div class="template-demo">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 grid-margin stretch-card">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="card-body">
+                    <h4 class="card-title">Website</h4>
+                    <p class="card-description">http://www.del.ac.id</p>
+                    <div class="template-demo d-flex justify-content-between flex-nowrap">
+                      </button>
+                    </div>
+                  </div>
+                  </div> 
+                  <div class="col-md-5">
+                    <div class="card-body">
+                      <h4 class="card-title">Email</h4>
+                      <p class="card-description">info@del.ac.id</p>
+                      <div class="template-demo">
+                      </div>
+                      <div class="template-demo mt-4">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Karir</h4>
+                  <p class="card-description">karir@del.ac.id</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h4 class="card-title">Prestasi IT Del</h4>
+                      <p class="card-description">Tim Developing Candlenut Slicer Tool For Andaliman Derived Product Production Using Design For Sustainability Principle Institut Teknologi Del yaitu Benedikta Anna Haulian Siboro, S.T., M.Sc dan Giery Stevanus terima Sertifikat Hak Kekayaan Intelektual (HAKI).
+                        Tim Developing Derivative Products From Andaliman (Zanthoxylum Acanthopodium) Using Design For Sustainability Principles Institut Teknologi Del yaitu Yosef Barita Sar Manik ST., M.Sc.,P.hD. dan Benedikta Anna Haulian Siboro, S.T., M.Sc terima Sertifikat Hak Kekayaan Intelektual (HAKI).
+                        Penelitian Albert Sagala, S.T, M.T dengan Judul “Vessel Tracking System (VTS) Real-time Monitoring Based on GPS-LoRa Communication”.
+                        Tim Buku Sekawanan Kecil Di Tepian Danau Toba yaitu Yosef Barita Sar Manik ST., M.Sc.,P.hD. dan Benedikta Anna Haulian Siboro, S.T., M.Sc terima Sertifikat Hak Kekayaan Intelektual (HAKI).
+                        Pengabdian kepada Masyarakat Nenni Mona Aruan, S.Pd., M.Si dengan Judul “PKM Usaha Pengolahan Kemiri Di Kecamatan Laguboti”.
+                      </p>
+                      <div class="template-demo">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          </button>
+                        </div>
+                      </div>
+                      <div class="template-demo">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          </button>
+                          </button>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="template-demo mt-4">
+                        <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                        </div>
+                          <div class="btn-group">
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item">Go back</a>
+                              <a class="dropdown-item">Delete</a>
+                              <a class="dropdown-item">Swap</a>
+                            </div>                          
+                          </div>
+                        </div>
+                        <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                        </div>
+                    </div>
+                  </div>
+                    <div class="card-body">
+                      <h4 class="card-title">Akses Cepat</h4>
+                    <p class="card-description">CIS IT DEL
+                      <code>https://cis.del.ac.id/user/login</code>
+                    <p class="card-description">ECOURSE IT DEL
+                      <code>https://ecourse.del.ac.id/login/index.php</code>
+                    <p class="card-description">ONE LIBRARY INFORMATION SYSTEM IT DEL
+                      <code>https://sipp.del.ac.id</code>
+                    <p class="card-description">Sertifikat Akreditasi
+                      <code>https://www.del.ac.id/?page_id=9861</code>
+                    <p class="card-description">SPMB IT DEL
+                      <code>http://spmb.del.ac.id</code>
+                    </p>
+                    <script src="vendors/js/vendor.bundle.base.js"></script>
+                    <script src="vendors/chart.js/Chart.min.js"></script>
+                    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+                    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+                    <script src="js/dataTables.select.min.js"></script>
+                    <script src="js/off-canvas.js"></script>
+                    <script src="js/hoverable-collapse.js"></script>
+                    <script src="js/template.js"></script>
+                    <script src="js/settings.js"></script>
+                    <script src="js/todolist.js"></script>
+                    <script src="js/dashboard.js"></script>
+                    <script src="js/Chart.roundedBarCharts.js"></script>
+</body>
+</html>

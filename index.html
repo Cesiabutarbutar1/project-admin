@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Institut Teknologi Del</title>
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <link rel="shortcut icon" href="images/logo it del.jpg" />
+</head>
+<body>
+  <div class="container-scroller">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/logo it del.jpg" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.jpg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="CONTACTUSDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="CONTACTUSDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">DASHBOARD</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Pengumuman</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Program Pendidikan</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Lembaga</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/face28.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="container-fluid page-body-wrapper">
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">LINKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">TESTIMONIAL</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Sistem Informasi
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Akademik
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Perpustakaan
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Alumni
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Kegiatan</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Kamis, 23 November 2023</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">IT Del Sosialisasikan Program MBKM kepada Mahasiswa</p>
+              <p class="text-gray mb-0">Pada Kamis, 23 November 2023, Divisi Pembelajaran Diluar Kampus – UPT PP ESTEM melaksanakan sosialisasi MBKM (Merdeka Belajar Kampus Merdeka) untuk mahasiswa-mahasiswi IT Del.</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Jumat, 24 November 2023</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Kuliah Umum oleh Konsulat Amerika Serikat terkait Suku Asli Amerika Serikat</p>
+              <p class="text-gray mb-0 ">Pada hari Jumat, 24 November 2023 Institut Teknologi Del menerima kunjungan dari Ibu Kristy Mordhorts (Konsulat Amerika Serikat di Medan).</p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Aditya Pranata Siregar</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">Sofware</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face29.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Aditya Pranata Siregar</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Pengumuman</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="buttons.html">Berita Terkini</a></li>
+                <li class="nav-item"> <a class="nav-link" href="dropdowns.html">Profile Del</a></li>
+                <li class="nav-item"> <a class="nav-link" href="typography.html">Berita SPMB</a></li>
+                <li class="nav-item"> <a class="nav-link" href="crud.html">Crud Pengumuman</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="program pendidikan">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Program Pendidikan</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="basic_elements.html">Program Studi</a></li>
+                <li class="nav-item"> <a class="nav-link" href="crud program pendidikan.html">Crud Program Studi</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#Lembaga" aria-expanded="false" aria-controls="Lembaga">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Lembaga</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="Lembaga">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">LPPM</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">Mitra Kerjasama Dengan IT Del</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">UPT PP-ESTEM</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">Sistem Penjaminan Mutu (SPM)</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">Pusat Modal Manusia (PMM)</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembaga.html">Koperasi</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Lembagas.html">Pusat Bahasa Del</a></li>
+                <li class="nav-item"> <a class="nav-link" href="crud lembaga.html">Crud Lembaga</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="Fasilitas">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Fasilitas</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="Fasilitas.html">Laboratorium dan Kelas</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Fasilitas.html">Akomodasi</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Fasilitas.html">Kantin</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Fasilitas.html">Perpustakaan</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Fasilitas.html">Hiburan dan Olahraga</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Fasilitas.html">Ruang Terbuka</a></li>
+                <li class="nav-item"> <a class="nav-link" href="Fasilitas.html">Klinik</a></li>
+                <li class="nav-item"> <a class="nav-link" href="crud fasilitas.html">Crud Fasilitas</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Welcome Admin</h3>
+                  <h6 class="font-weight-normal mb-0">Institut Teknologi Del<span class="text-primary"></span></h6>
+                </div>
+                <div class="col-12 col-xl-4">
+                 <div class="justify-content-end d-flex">
+                  <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                  </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card tale-bg">
+                <div class="card-people mt-auto">
+                  <img src="images/dashboard/background.jpg" alt="background">
+                  <div class="weather-info">
+                    <div class="d-flex">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin transparent">
+              <div class="row">
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body">
+                      <p class="mb-4">Pengukuhan Mahasiswa IT Del Angkatan XXIII dan Dies Natalis ke XXII</p>
+                      <p class="fs-30 mb-2">483</p>
+                      <p>25th September 2023</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">Wisuda Lulusan Institut Teknologi Del </p>
+                      <p class="fs-30 mb-2">398</p>
+                      <p>25th September 2023</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                  <div class="card card-light-blue">
+                    <div class="card-body">
+                      <p class="mb-4">Lulusan PMDK</p>
+                      <p class="fs-30 mb-2">128</p>
+                      <p>5th Desember 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 stretch-card transparent">
+                  <div class="card card-light-danger">
+                    <div class="card-body">
+                      <p class="mb-4">Lulusan USM 1</p>
+                      <p class="fs-30 mb-2">85</p>
+                      <p>16th Januari 2023</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">Prosedur Pelaksanaan Tes Akademik Jalur USM3 IT Del Tahun Akademik 2023/2024</p>
+                  <p class="font-weight-500">Peserta yang asal sekolah TOBA, mengikuti Tes Akademik secara ONSITE di Kampus Institut Teknologi Del.</p>
+                  <div class="d-flex flex-wrap mb-5">
+                    </div>
+                  <p class="card-title">Informasi PMB Jalur Sertifikat Ujian Tulis Berbasis Komputer (Sertifikat UTBK) 2023/2024 & Jadwal Pelaksanaan Kegiatan</p>
+                  <div class="d-flex flex-wrap mb-5">
+                    <div class="mr-5 mt-3">
+                      <p class="font-weight-500">Memiliki minat yang tinggi untuk melanjutkan studi di IT Del dan akan mendaftarkan diri sebagai mahasiswa IT Del apabila dinyatakan lulus seleksi untuk program USM.</p>
+                    </div>
+                    <div class="mr-5 mt-3">
+                    </div>
+                    <div class="mr-5 mt-3">
+                    </div>
+                    <div class="mt-3">
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                 <div class="d-flex justify-content-between">
+                </div>
+                <p class="card-title">Visi</p>
+                  <p class="font-weight-500">Menjadi lembaga pendidikan tinggi yang unggul dan berperan sebagai agen pembaharu dan pelopor dalam pengembangan dan pemanfaatan teknologi bagi kemajuan dan kesejahteraan bangsa</p>
+                <p class="card-title">Misi</p>
+                  <p class="font-weight-500">Menjadi lembaga pendidikan tinggi yang unggul dan berperan sebagai agen pembaharu dan pelopor dalam pengembangan dan pemanfaatan teknologi bagi kemajuan dan kesejahteraan bangsa</p>
+                </div>
+                  <div id="sales-legend" class="tentangdeljs-legend mt-4 mb-2"></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                  <div id="sales-legend" class="tentangdeljs-legend mt-4 mb-2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card position-relative">
+                <div class="card-body">
+                  <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row">
+                          <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                            <div class="ml-xl-4 mt-3">
+                            <p class="card-title">Keunggulan IT Del</p>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">Kurikulum Pendidikan IT Del</h3>
+                              <p class="mb-2 mb-xl-0">Berbasis pada capaian dan produk yang secara eksplisit dan terukur menetapkan capaian yang harus diraih lulusan setelah menempuh pendidikan di IT Del,
+                                berpusat pada peserta didik yang berorientasi pada kebutuhan, kemampuan, minat dan pola belajar.</p>
+                            </div>  
+                            </div>
+                          <div class="col-md-12 col-xl-9">
+                            <div class="row">
+                              <div class="col-md-6 border-right">
+                                <div class="table-responsive mb-3 mb-md-0 mt-3">
+                                  <table class="table table-borderless report-table">
+                                    <tr>
+                                      <td class="text-muted">Pengalaman Pembelajaran Terpadu</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">50</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Dosen Bereputasi</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">70</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Pendidikan Karakter</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">90</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Kehidupan Berasrama</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">95</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Fasilitas Kampus</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">75</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Beasiswa Berprestasi</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">100</h5></td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mt-3">
+                                <div id="north-america-legend"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row">
+                          <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                            <div class="ml-xl-4 mt-3">
+                            <p class="card-title">Program Pendidikan</p>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">APA ITU PROGRAM STUDI?</h3>
+                              <p class="mb-2 mb-xl-0">Program studi adalah kesatuan rencana belajar sebagai pedoman penyelenggaraan pendidikan akademik dan/atau profesional yang diselenggarakan atas dasar suatu kurikulum serta ditujukan agar mahasiswa dapat menguasai pengetahuan, keterampilan, dan sikap sesuai dengan sasaran kurikulum.</p>
+                            </div>  
+                            </div>
+                          <div class="col-md-12 col-xl-9">
+                            <div class="row">
+                              <div class="col-md-6 border-right">
+                                <div class="table-responsive mb-3 mb-md-0 mt-3">
+                                  <table class="table table-borderless report-table">
+                                    <tr>
+                                      <td class="text-muted">Fakultas Informatika & Teknik ELektro</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">78</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Fakultas Vokasi</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">300</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Fakultas Bioteknologi</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">50</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Fakultas Teknologi Industri</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">200</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Penerimaan Mahasiswa Baru</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">2.125</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Penerimaan Dosen</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">793</h5></td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mt-3">
+                                <div id="south-america-legend"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#detailedReports" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#detailedReports" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-7 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0"></p>
+                  <div class="table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Pengumuman</th>
+                          <th>Date</th>
+                          <th>Deskripsi</th>
+                        </tr>  
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Penerimaan Mahasiswa Baru Angkatan XXII 2022</td>
+                          <td class="font-weight-bold">10 Des 21</td>
+                          <td>Jalur PMDK</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Done</div></td>
+                        </tr>
+                        <tr>
+                          <td>Pendaftaran Mahasiswa Baru Angkatan XXII 2022</td>
+                          <td class="font-weight-bold">18 Jan 22</td>
+                          <td>Jalur USM 1</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Done</div></td>
+                        </tr>
+                        <tr>
+                          <td>Pendaftaran Mahasiswa Baru Angkatan XXII 2022</td>
+                          <td class="font-weight-bold">18 Feb 22</td>
+                          <td>Jalur USM 2</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Done</div></td>
+                        </tr>
+                        <tr>
+                          <td>Pendaftaran Mahasiswa Baru Angkatan XXII 2022</td>
+                          <td class="font-weight-bold">5 Apr 22</td>
+                          <td>Jalur USM 3</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Done</div></td>
+                        </tr>
+                        <tr>
+                          <td>Pendaftaran Mahasiswa Baru Angkatan XXII 2022</td>
+                          <td class="font-weight-bold">1 Jun 22</td>
+                          <td>Jalur UTBK</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Done</div></td>
+                        </tr>
+                        <tr>
+                          <td>Inaugurasi, Dies Natalis dan Wisuda Tahun 2022g</td>
+                          <td class="font-weight-bold">9 Sep 22</td>
+                          <td>Batas Akhir Pendaftaran Wisuda Tahun 2022</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Done</div></td>
+                        </tr>
+                        <tr>
+                          <td>Inaugurasi, Dies Natalis dan Wisuda Tahun 2022</td>
+                          <td class="font-weight-bold">3 Sep 22</td>
+                          <td>Inaugurasi dan Dies Natalis IT Del ke 21</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Done</div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Program Pendidikan</h4>
+									<div class="list-wrapper pt-2">
+										<ul class="d-flex flex-column-reverse todo-list todo-list-custom">
+											<li>
+												<div class="form-check form-check-flat">
+													<label class="form-check-label">
+														<input class="checkbox" type="checkbox">
+														S1 Informatika
+													</label>
+												</div>
+												<i class="remove ti-close"></i>
+											</li>
+											<li>
+												<div class="form-check form-check-flat">
+													<label class="form-check-label">
+														<input class="checkbox" type="checkbox">
+														S1 Sistem Informasi
+													</label>
+												</div>
+												<i class="remove ti-close"></i>
+											</li>
+											<li>
+												<div class="form-check form-check-flat">
+													<label class="form-check-label">
+														<input class="checkbox" type="checkbox">
+														D4 Teknologi Rekayasa Perangkat Lunak
+													</label>
+												</div>
+												<i class="remove ti-close"></i>
+											</li>
+											<li>
+												<div class="form-check form-check-flat">
+													<label class="form-check-label">
+														<input class="checkbox" type="checkbox">
+                            D3 Teknologi Komputer
+													</label>
+												</div>
+												<i class="remove ti-close"></i>
+											</li>
+											<li>
+												<div class="form-check form-check-flat">
+													<label class="form-check-label">
+														<input class="checkbox" type="checkbox">
+														D3 Teknologi Informasi
+													</label>
+												</div>
+												<i class="remove ti-close"></i>
+											</li>
+										</ul>
+                  </div>
+                  <div class="add-items d-flex mb-0 mt-2">
+										<input type="text" class="form-control todo-list-input"  placeholder="Add new task">
+										<button class="add btn btn-icon text-primary todo-list-add-btn bg-transparent"><i class="icon-circle-plus"></i></button>
+									</div>
+								</div>
+							</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 stretch-card grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0">Beasiswa Institut Teknologi Del</p>
+                  <div class="table-responsive">
+                    <table class="table table-borderless">
+                      <tbody>
+                        <tr>
+                          <td class="pl-0">Beasiswa Prestasi</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-0">Beasiswa KIP Kuliah</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-0">Beasiswa PPA (Peningkatan Prestasi Akademik)</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-0">Beasiswa Sea Scholarship</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-0">Beasiswa Alumni</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+              <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-title">Fasilitas</p>
+                      <div class="charts-data">
+                        <div class="mt-3">
+                          <p class="mb-0">Laboratorium dan Kelas</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="progress progress-md flex-grow-1 mr-4">
+                              <div class="progress-bar bg-info" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mb-0">8 ruangan</p>
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <p class="mb-0">Akomodasi</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="progress progress-md flex-grow-1 mr-4">
+                              <div class="progress-bar bg-inf0" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mb-0">30 akomodasi</p>
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <p class="mb-0">Kantin</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="progress progress-md flex-grow-1 mr-4">
+                              
+                              <div class="progress-bar bg-info" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mb-0">2 kantin</p>
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <p class="mb-0">Perpustakaan</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="progress progress-md flex-grow-1 mr-4">
+                              <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mb-0">1 perpustakaan</p>
+                          </div>
+                        </div>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
+                  <div class="card data-icon-card-primary">
+                    <div class="card-body">
+                      <p class="card-title text-white">CONTACT US</p>                      
+                      <div class="row">
+                        <div class="col-8 text-white">
+                          <h6>Institut Teknologi Del
+                            Jl. Sisingamangaraja, Sitoluama
+                            Laguboti, Toba Samosir
+                            Sumatera Utara, Indonesia
+                            Kode Pos: 22381
+                            Telp: +62 632 331234
+                            Fax: +62 632 331116
+                          </h6>
+                          <p class="text-white font-weight-500 mb-0">
+                            Website: http://www.del.ac.id
+                            Email:info@del.ac.id
+                            Karir: karir@del.ac.id
+                          </p>
+                        </div>
+                        <div class="col-4 background-icon">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">Profil Del</p>
+                  <ul class="icon-data-list">
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face1.jpg" alt="user">
+                        <div>
+                          <p class="text-info mb-1">IT Del Sosialisasikan Program MBKM kepada Mahasiswa</p>
+                          <p class="mb-0">By admin / November 24 2023</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face2.jpg" alt="user">
+                        <div>
+                          <p class="text-info mb-1">Kuliah Umum oleh Konsulat Amerika Serikat terkait Suku Asli Amerika Serikat</p>
+                          <p class="mb-0">By admin / November 27 2023</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                      <img src="images/faces/face3.jpg" alt="user">
+                     <div>
+                      <p class="text-info mb-1">Sampling Kemenyan Toba di Kabupaten Tapanuli Utara, Kabupaten Humbang Hasundutan, dan Kabupaten Pakpak Bharat</p>
+                      <p class="mb-0">By admin / November 23 2023</p>
+                     </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face4.jpg" alt="user">
+                        <div>
+                          <p class="text-info mb-1">IT Del Ikuti Kegiatan KMI EXPO XIV di Bali Hingga Terima Penghargaan Pendamping Terbaik</p>
+                          <p class="mb-0">By admin / November 22 2023</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <img src="images/faces/face5.jpg" alt="user">
+                        <div>
+                        <p class="text-info mb-1">Bapak Gibran Rakabuming Raka Beri Kuliah Umum kepada Mahasiswa IT Del terkait “Pemimpin Milenial”</p>
+                        <p class="mb-0">By admin / November 20 2023</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">LATEST TWEETS</p>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="table-responsive">
+                        <table id="example" class="display expandable-table" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th>Email</th>
+                              <th>Facebook</th>
+                              <th>Instagram</th>
+                              <th>Twitter</th>
+                              <th>Youtube</th>
+                              <th>Radio</th>
+                              <th>Akreditasi</th>
+                              <th>Lokasi</th>
+                            </tr>
+                          </thead>
+                      </table>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          </div>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          </div>
+        </footer> 
+      </div>
+    </div>   
+  </div>
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+</body>
+</html>
